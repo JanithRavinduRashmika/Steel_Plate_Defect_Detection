@@ -1,0 +1,270 @@
+/* Dashboard Layout */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #111827;
+  color: #F3F4F6;
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F97316;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  color: #9CA3AF;
+  font-size: 1rem;
+}
+
+/* File Upload Section */
+.upload-section {
+  background-color: #1F2937;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.upload-section:hover {
+  border-color: #F97316;
+}
+
+.upload-container {
+  border: 2px dashed #4B5563;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  border-color: #F97316;
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: #1F2937;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: #F97316;
+  transform: translateY(-2px);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F97316;
+}
+
+.stat-label {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+}
+
+/* Charts Grid */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  background-color: #1F2937;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #374151;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F97316;
+  margin-bottom: 1rem;
+}
+
+.chart-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+  background-color: #1F2937;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #374151;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 1rem;
+  color: #9CA3AF;
+  border-bottom: 1px solid #374151;
+  font-weight: 600;
+}
+
+.data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #374151;
+}
+
+.data-table tr:hover {
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+/* Chart Specific Styles */
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    margin-bottom: 1rem;
+  }
+  
+  .chart-container {
+    height: 350px;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* New Submit Button and Filter Input Styles */
+.upload-section .submit-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #F97316;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-section .submit-btn:hover {
+  background-color: #d25b14;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #4B5563;
+  border-radius: 0.5rem;
+  background-color: #1F2937;
+  color: #F3F4F6;
+}
+
+.table-container {
+  position: relative;
+}
+
+.table-container thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #1F2937;
+}
+
+.filter-input {
+  background-color: #1F2937;
+  border: 1px solid #4B5563;
+  color: #F3F4F6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+  border-color: #F97316;
+}
+
+.filter-input {
+  background-color: #1F2937;
+  border: 1px solid #4B5563;
+  color: #F3F4F6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+  border-color: #F97316;
+}
+
+/* Dropdown specific styles */
+select.filter-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239CA3AF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+select.filter-input option {
+  background-color: #1F2937;
+  color: #F3F4F6;
+}
